@@ -1,0 +1,21 @@
+{
+  "name": "cs-website",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "This is a group project. If you're my group member, here's how you can contribute:",
+  "main": "index.js",
+  "scripts": {
+    "build": "node esbuild.config.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.0",
+    "esbuild-sass-plugin": "^3.3.1",
+    "postcss": "^8.4.49",
+    "postcss-preset-env": "^10.1.1"
+  }
+}

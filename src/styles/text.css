@@ -1,0 +1,137 @@
+h1,
+.h1 {
+    font-size: 2.986rem;
+}
+
+h2,
+.h2 {
+    font-size: 2.488rem;
+}
+
+h3,
+.h3 {
+    font-size: 2.074rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.728rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.44rem;
+}
+
+h6,
+.h6 {
+    font-size: 1.2rem;
+}
+
+p,
+.p {
+    font-size: 1rem;
+}
+
+small,
+.small {
+    font-size: 0.833rem;
+}
+
+.xsmall {
+    font-size: 0.694rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+    h1,
+    .h1 {
+        font-size: 3.815rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 3.052rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 2.441rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 1.953rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.563rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.25rem;
+    }
+
+    p,
+    .p {
+        font-size: 1rem;
+    }
+
+    small,
+    .small {
+        font-size: 0.8rem;
+    }
+
+    .xsmall {
+        font-size: 0.64rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    h1,
+    .h1 {
+        font-size: 5.61rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 4.209rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 3.157rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 2.369rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.777rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.333rem;
+    }
+
+    p,
+    .p {
+        font-size: 1rem;
+    }
+
+    small,
+    .small {
+        font-size: 0.75rem;
+    }
+
+    .xsmall {
+        font-size: 0.563rem;
+    }
+}

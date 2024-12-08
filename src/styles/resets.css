@@ -8,7 +8,7 @@
 
 html {
     text-rendering: optimizeSpeed;
-    @include font-size(16);
+    font-size: 16px;
 }
 
 html:focus-within {
@@ -173,8 +173,13 @@ ol:not([role="list"]) {
 
 img {
     border: 0;
+
     max-width: 100%;
+
     shape-margin: 2rem;
+
+    object-fit: cover;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,7 +285,6 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
     *,
     ::before,
     ::after {

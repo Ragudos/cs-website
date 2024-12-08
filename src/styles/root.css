@@ -1,0 +1,162 @@
+:root {
+  --background: 34 47% 97%;
+  --foreground: 40 48% 6%;
+  --card: 34 47% 97%;
+  --card-foreground: 40 48% 6%;
+  --popover: 34 47% 97%;
+  --popover-foreground: 40 48% 6%;
+  --primary: 0 53% 31%;
+  --primary-foreground: 34 47% 97%;
+  --secondary: 240 53% 31%;
+  --secondary-foreground: 34 47% 97%;
+  --muted: 34 47% 20%;
+  --muted-foreground: 40 48% 70%;
+  --accent: 120 53% 31%;
+  --accent-foreground: 34 47% 97%;
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 40 48% 6%;
+  --border: 34 47% 20%;
+  --input: 34 47% 20%;
+  --ring: 120 53% 40%;
+  --radius: 0.175em;
+
+  --transition-duration: 250ms;
+
+  --padding-inline: 2em;
+  --max-content-width: 80em;
+  --max-section-description-width: 40em;
+
+  /* Space scale based on minor third (6:5) */
+  --space-xs: 0.8rem;
+  /* 12.8px */
+  --space-sm: 1rem;
+  /* 16px */
+  --space-md: 1.2rem;
+  /* 19.2px */
+  --space-lg: 1.44rem;
+  /* 23.04px */
+  --space-xl: 1.73rem;
+  /* 27.68px */
+  --space-2xl: 2.08rem;
+  /* 33.28px */
+  --space-3xl: 2.5rem;
+  /* 40px */
+
+  color-scheme: light;
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --space-xs: 0.75rem;
+    /* 12px */
+    --space-sm: 1rem;
+    /* 16px */
+    --space-md: 1.333rem;
+    /* 21px (1rem * 1.333) */
+    --space-lg: 1.777rem;
+    /* 28px (1.333 * 1.333) */
+    --space-xl: 2.37rem;
+    /* 38px (1.777 * 1.333) */
+    --space-2xl: 3.16rem;
+    /* 51px (2.37 * 1.333) */
+    --space-3xl: 4.21rem;
+    /* 67px (3.16 * 1.333) */
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root {
+    /* Space scale based on major third (5:4) */
+    --space-xs: 0.8rem;
+    /* 12.8px */
+    --space-sm: 1rem;
+    /* 16px */
+    --space-md: 1.25rem;
+    /* 20px */
+    --space-lg: 1.56rem;
+    /* 25px */
+    --space-xl: 1.95rem;
+    /* 31.2px */
+    --space-2xl: 2.44rem;
+    /* 39.04px */
+    --space-3xl: 3.05rem;
+    /* 48.8px */
+  }
+}
+
+.dark {
+  --background: 34 47% 3%;
+  --foreground: 40 48% 94%;
+  --card: 34 47% 3%;
+  --card-foreground: 40 48% 94%;
+  --popover: 34 47% 3%;
+  --popover-foreground: 40 48% 94%;
+  --primary: 0 53% 69%;
+  --primary-foreground: 34 47% 3%;
+  --secondary: 240 53% 69%;
+  --secondary-foreground: 34 47% 3%;
+  --muted: 34 47% 80%;
+  --muted-foreground: 40 48% 94%;
+  --accent: 120 53% 69%;
+  --accent-foreground: 34 47% 3%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 41 49% 10%;
+  --border: 34 47% 60%;
+  --input: 34 47% 80%;
+  --ring: 120 53% 60%;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  .system {
+    --background: 34 47% 97%;
+    --foreground: 40 48% 6%;
+    --card: 34 47% 97%;
+    --card-foreground: 40 48% 6%;
+    --popover: 34 47% 97%;
+    --popover-foreground: 40 48% 6%;
+    --primary: 0 53% 31%;
+    --primary-foreground: 34 47% 97%;
+    --secondary: 240 53% 31%;
+    --secondary-foreground: 34 47% 97%;
+    --muted: 34 47% 20%;
+    --muted-foreground: 40 48% 70%;
+    --accent: 120 53% 31%;
+    --accent-foreground: 34 47% 97%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 40 48% 6%;
+    --border: 34 47% 20%;
+    --input: 34 47% 20%;
+    --ring: 120 53% 40%;
+    --radius: 0.5rem;
+
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .system {
+    --background: 34 47% 3%;
+    --foreground: 40 48% 94%;
+    --card: 34 47% 3%;
+    --card-foreground: 40 48% 94%;
+    --popover: 34 47% 3%;
+    --popover-foreground: 40 48% 94%;
+    --primary: 0 53% 69%;
+    --primary-foreground: 34 47% 3%;
+    --secondary: 240 53% 69%;
+    --secondary-foreground: 34 47% 3%;
+    --muted: 34 47% 80%;
+    --muted-foreground: 40 48% 94%;
+    --accent: 120 53% 69%;
+    --accent-foreground: 34 47% 3%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 41 49% 10%;
+    --border: 34 47% 60%;
+    --input: 34 47% 80%;
+    --ring: 120 53% 60%;
+
+    color-scheme: dark;
+  }
+}

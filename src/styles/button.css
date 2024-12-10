@@ -14,7 +14,16 @@ button,
 .btn,
 input[type=submit],
 input[type=reset] {
-    padding: 0.625rem 0.275rem;
+    --_padding-inline: 1.25rem;
+    --_padding-block: 0.725rem;
+
+    padding: var(--_padding-block) var(--_padding-inline);
+
+    min-width: 10ch;
+    min-height: 5ch;
+
+    cursor: pointer;
+    display: inline-block;
 }
 
 a:focus-visible,

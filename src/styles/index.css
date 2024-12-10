@@ -34,6 +34,10 @@ main {
   padding-block: var(--space-xl);
 }
 
+section {
+  padding-block: 2rem;
+}
+
 #hero-section {
   display: flex;
 
@@ -75,4 +79,57 @@ main {
 
 #hero-section .image-container {
   max-width: 40em;
+}
+
+.cta {
+  --_transition-duration: var(--transition-duration, 250ms);
+
+  position: relative;
+
+  margin-top: var(--space-md);
+
+  will-change: padding-right;
+  transition-property: padding-right;
+  transition-duration: var(--_transition-duration);
+  transition-timing-function: ease-in;
+}
+
+.cta::before {
+  content: "»";
+
+  position: absolute;
+
+  right: 0.5rem;
+  top: 0;
+
+  opacity: var(--_opacity, 0);
+  transform: translate3d(var(--_x, -10%), var(--_y, 12.5%), var(--_z, 0));
+
+  font-size: 1.5rem;
+
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+
+  transition-duration: var(--_transition-duration);
+  transition-timing-function: ease-in;
+}
+
+.cta:hover {
+  padding-right: calc(var(--_padding-inline) + var(--_padding-inline) * 0.5);
+}
+
+.cta:hover::before {
+  --_x: 0;
+  --_opacity: 1;
+}
+
+#feature-section-description {
+  display: grid;
+  gap: var(--space-lg);
+
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#feature-section-description figcaption {
+  margin-top: var(--space-md);
 }

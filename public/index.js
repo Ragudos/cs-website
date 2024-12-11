@@ -1,1 +1,1 @@
-(()=>{function t(){document.documentElement.classList.remove("light","dark","system");let e=localStorage.getItem("theme");switch(e){case"dark":document.documentElement.classList.add("dark");break;case"light":document.documentElement.classList.add("light");break;default:e!="system"&&localStorage.removeItem("theme"),document.documentElement.classList.add("system")}}t();})();
+(()=>{})();

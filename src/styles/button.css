@@ -1,13 +1,16 @@
-a {
-    display: inline-block;
-}
-
 a,
 button,
-.ubtn,
+.btn,
 input[type=submit],
 input[type=reset] {
     border-radius: var(--radius);
+
+    font-weight: 500;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
 }
 
 button,

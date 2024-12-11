@@ -160,3 +160,16 @@
     color-scheme: dark;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.light .computer-icon.hide-if-not,
+.light .moon-icon.hide-if-not,
+.dark .computer-icon.hide-if-not,
+.dark .sun-icon.hide-if-not,
+.system .sun-icon.hide-if-not,
+.system .moon-icon.hide-if-not {
+  display: none;
+}

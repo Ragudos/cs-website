@@ -146,6 +146,11 @@
 }
 
 /* Border Utility Classes */
+.border {
+    border-width: 1px;
+    border-style: solid;
+}
+
 .border-border {
     border-color: hsl(var(--border) / var(--_border-opacity, 1));
 }

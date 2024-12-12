@@ -5,7 +5,7 @@ const autoprefixer = require("autoprefixer");
 const postcssPresetEnv = require("postcss-preset-env");
 
 esbuild
-  .context({
+  .build({
     entryPoints: ["src/index.js", "src/styles/index.css"], // Input files
     outdir: "public", // Output directory
     bundle: true, // Bundle files
@@ -23,9 +23,5 @@ esbuild
       }),
     ],
   })
-  .then((ctx) => {
-    ctx.watch().then(() => {
-      console.log("Watching...");
-    });
-  })
+  .then((ctx) => {})
   .catch(() => process.exit(1));

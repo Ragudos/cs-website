@@ -59,10 +59,14 @@ main section {
   gap: var(--space-lg);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 820px) {
   #hero-section {
     flex-direction: row;
     align-items: center;
+  }
+
+  .image-container {
+    flex-grow: 1;
   }
 }
 
@@ -70,7 +74,7 @@ main section {
   grid-area: heading;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 820px) {
   .heading {
     margin-bottom: var(--space-md);
   }
@@ -84,10 +88,51 @@ main section {
 
 .image-container {
   grid-area: img;
+
+  position: relative;
+
+  width: clamp(20em, 100%, 60em);
+  aspect-ratio: 3/4;
 }
 
-#hero-section .image-container {
-  max-width: 40em;
+.image-container [data-slideshow] {
+  position: relative;
+
+  border-width: 4px;
+  border-style: solid;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 0px 0px 2px 2px hsl(var(--accent) / 0.25) inset, 0px 0px 4px 4px hsl(var(--accnet) / 0.125) inset;
+}
+
+.image-container [data-slideshow] [data-slideshow-content] {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  will-change: opacity, visibility;
+
+  transition-property: opacity, visibility;
+  transition-duration: var(--transition-duration, 250ms);
+  transition-timing-function: ease-in-out;
+}
+
+.image-container [data-slideshow] [data-slideshow-content] img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-container [data-slideshow] [data-slideshow-content]:not([data-slideshow-content=current]) {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .cta {
@@ -139,7 +184,7 @@ main section {
   justify-items: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 820px) {
   #feature-section-description {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -184,10 +229,9 @@ section:not(#hero-section) .heading {
 }
 
 .testimonial {
-  --_shadow-color: var(--accent);
+  --_shadow-color: 0 0% 0%;
 
   padding: 1.025em 1.25em;
-  border-radius: var(--radius);
 }
 
 .testimonial-header {
@@ -211,13 +255,13 @@ body > footer {
   padding-block: var(--padding-inline);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 820px) {
   .main-footer {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1042px) {
   .main-footer {
     grid-template-columns: 2fr 1fr 1fr 1fr;
   }
@@ -239,4 +283,68 @@ svg {
 
 .footer-section nav ul li {
   margin-top: var(--space-xs);
+}
+
+.theme-btn-wrapper {
+  position: fixed;
+
+  bottom: 0;
+  right: 0;
+
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.theme-btn-container {
+  position: relative;
+
+  --_shadow-color: 0 0% 0%;
+}
+
+.dropdown-menu-theme {
+  position: absolute;
+
+  bottom: 130%;
+  right: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(var(--_x, 0), var(--_y, 10%), var(--_z, 0)) scale(var(--_scale, 0.95));
+
+  will-change: opacity, visibility, transform;
+  transition-property: opacity, visibility, transform;
+  transition-duration: var(--transition-duration, 250ms);
+  transition-timing-function: ease;
+}
+
+.dropdown-menu-theme[aria-hidden="false"] {
+  opacity: 1;
+  visibility: initial;
+
+  --_y: 0;
+  --_scale: 1;
+}
+
+.dropdown-menu-theme button {
+  will-change: background-color, color, opacity;
+  transition: background-color, color, opacity;
+  transition-duration: var(--transition-duration, 250ms);
+  transition-timing-function: ease-in;
+
+  width: 100%;
+
+  justify-content: flex-start;
+
+  background-color: hsl(var(--accent) / var(--_bg-opacity, 0));
+  opacity: 0.75;
+}
+
+.dropdown-menu-theme button:hover {
+  --_bg-opacity: 0.75;
+}
+
+.dropdown-menu-theme button[data-selected=true] {
+  color: hsl(var(--accent-foreground) / var(--_text-opacity, 1));
+  --_bg-opacity: 1;
+  opacity: 1;
 }

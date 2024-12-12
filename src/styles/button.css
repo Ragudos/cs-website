@@ -26,7 +26,6 @@ input[type=reset] {
     min-height: 5ch;
 
     cursor: pointer;
-    display: inline-block;
 }
 
 a:focus-visible,
@@ -34,7 +33,7 @@ button:focus-visible,
 .btn:focus-visible,
 input[type=submit]:focus-visible,
 input[type=reset]:focus-visible {
-    box-shadow: 0px 0px 0px 6px hsl(var(--background)), 0px 0px 0px 8px hsl(var(--foreground) / var(--_outline-opacity, 1));
+    box-shadow: 0px 0px 0px 4px hsl(var(--background)), 0px 0px 0px 5px hsl(var(--foreground) / var(--_outline-opacity, 1));
 }
 
 .underline-hover-effect {
@@ -64,4 +63,17 @@ input[type=reset]:focus-visible {
 .underline-hover-effect:hover::before {
     --_scaleX: 1;
     transform-origin: top left;
+}
+
+button.icon,
+.btn.icon,
+input[type=submit].icon,
+input[type=reset].icon {
+    min-width: auto;
+    min-height: auto;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 6px;
 }
